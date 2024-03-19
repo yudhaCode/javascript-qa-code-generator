@@ -1,0 +1,247 @@
+/* root */
+:root {
+  --color-background: #111729;
+  --color-form-bg: #030617;
+  --color-button: #3762e4;
+  --color-text: #f2f5f9;
+  --color-translucent: #1e2c51;
+}
+
+/* css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* body */
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  background-image: url("/asstes/bg-illustration.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 16rem 5rem;
+  font-style: normal;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (min-width: 1279px) {
+  body {
+    background-position: 105% 5rem;
+  }
+}
+
+form {
+  background-color: var(--color-form-bg);
+}
+
+button {
+  background-color: var(--color-button);
+  color: var(--color-text);
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  scale: 0.9;
+}
+
+.overlay {
+  background-color: var(--color-translucent);
+}
+
+/* container */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputLinkWrapper,
+.qrCodeWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qrCodeWrapper {
+  justify-content: start;
+  align-items: start;
+  padding: 2.5rem 4.5rem;
+}
+
+.logo {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+form.form-qr {
+  width: 100%;
+  max-width: 38.0625rem;
+  padding: 6px;
+  border: 2px solid var(--color-button);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+form .input-field {
+  width: 73%;
+  padding-left: 1.875rem;
+  color: var(--color-text);
+}
+
+button.generate-qr {
+  padding: 1.25rem 2.5rem;
+}
+
+.qr-code {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  margin-top: 6rem;
+}
+
+.qr-code .qr-img-wrapper {
+  background-color: var(--color-text);
+  padding: 1.875rem;
+  border-radius: 1.5rem;
+}
+
+.qr-code .qr-img-wrapper img {
+  width: 100%;
+  max-width: 11.4375rem;
+}
+
+.qr-code .circle {
+  width: 100%;
+  max-width: 19.25rem;
+  height: 100%;
+  max-height: 19.25rem;
+  border-radius: 50%;
+  background-color: var(--color-translucent);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.qr-logo-result {
+  width: 100%;
+  max-width: 6.9375rem;
+  margin-bottom: 0;
+}
+
+.button-util-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.button-util-wrapper img {
+  margin-left: 14px;
+  margin-top: 3px;
+  width: 1.125rem;
+}
+
+button.download-qr,
+button.share-qr {
+  padding: 1.125rem 2.625rem;
+  display: flex;
+}
+
+/* utility */
+.hidden {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.z-10 {
+  z-index: 10;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <title>Javascript-qa-code-generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- input link generate-qr start -->
+      <div class="inputLinkWrapper">
+        <div class="logo">
+          <img src="asstes/logo-qr-generator.svg" alt="logo-qr-generator" />
+        </div>
+        <form class="form-qr">
+          <input type="text" class="input-field" placeholder="Enter an url" />
+          <button type="submit" class="button generate-qr">QR Code</button>
+        </form>
+      </div>
+      <!-- input link generate-qr end -->
+
+      <!-- qr-code result start -->
+      <div class="qrCodeWrapper hidden">
+        <div class="logo qr-logo-result">
+          <img src="asstes/logo-qr-generator.svg" alt="logo-qr-generator" />
+        </div>
+
+        <div class="qr-code relative">
+          <div>
+            <div class="circle"></div>
+
+            <div class="qr-img-wrapper relative z-10">
+              <img src="asstes/MM_QRcode.png" alt="qr-code" />
+            </div>
+          </div>
+
+          <div class="button-util-wrapper">
+            <button type="submit" class="button download-qr">
+              Download
+              <img src="asstes/arrow-down.png" alt="arrow-down" />
+            </button>
+            <button type="submit" class="button share-qr">
+              Share
+              <img src="asstes/share.png" alt="arrow-down" />
+            </button>
+          </div>
+        </div>
+
+        <div></div>
+      </div>
+
+      <!-- qr-code result end -->
+    </div>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>
